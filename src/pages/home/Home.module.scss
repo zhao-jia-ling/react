@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  // 给所有高亮类名加
+  // :global {
+  //   .active {
+  //     background: skyblue;
+  //   }
+  // }
+
+  // 给某一个类名单独加
+  :global(a.active) {
+    background: skyblue;
+  }
+}
+.footer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.footer img {
+  height: 24px;
+  margin-bottom: 5px;
+}
