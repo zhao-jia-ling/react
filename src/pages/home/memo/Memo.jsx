@@ -12,7 +12,6 @@ const Memo = () => {
   const navigate = useNavigate()
 
   return (
-
   <div className={style.memo}>
     {/* 有的话就渲染第二个页面，没有的话就渲染第一个页面 */}
     {memoList.length === 0 ?
@@ -30,7 +29,7 @@ const Memo = () => {
         <div className={style.row} key={it.id} onClick={()=> navigate(`/detail/${it.id}`)}>
           <h3>{it.task}</h3>
           <p>本金：{it.bj} 佣金：{it.yj}</p>
-          <p>{new Date(it.id).toLocaleString()}</p>
+          <p>{(new Date(it.id)).toLocaleString()}</p>
         </div>
       )}
   </div>
